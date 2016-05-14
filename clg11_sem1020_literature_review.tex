@@ -323,9 +323,11 @@
 
 %\title{Considerations Toward Software Safety and Trustworthiness for Autonomous Vehicles}
 
-\title{Considerations in Software Toward the Safety, Trustworthiness and Acceptance of Autonomous Vehicles}
+%\title{Considerations in Software Toward the Safety, Trustworthiness and Acceptance of Autonomous Vehicles}
+%
+%\title{Considerations in Software Toward Driving Acceptance \& Trust of Autonomous Vehicles}
 
-\title{Considerations in Software Toward Driving Acceptance \& Trust of Autonomous Vehicles}
+\title{Considerations Toward Driving Acceptance \& Trust of Autonomous Vehicles}
 
 % author names and affiliations
 % use a multiple column layout for up to three different
@@ -344,7 +346,7 @@ Email: clg11@aber.ac.uk}}
 % As a general rule, do not put math, special symbols or citations
 % in the abstract
 \begin{abstract}
-  As recent technical accomplishments continue to accelerate the notion of driverless vehicles from vague possibility toward tangible reality, increasing attention within this domain is focussed on addressing the social, legal and philosophical issues that are expected to represent significant barriers in the path toward mainstream adoption of fully-autonomous vehicles within our existing societal frameworks.
+  As recent technical accomplishments continue to accelerate the notion of driverless vehicles from distant possibility toward tangible reality, increasing attention within this domain is focussed on addressing the social, legal and philosophical issues that are expected to represent significant barriers in the path toward mainstream adoption of fully-autonomous vehicles within our existing societal frameworks.
   From surveying current literature obtained from a range of academic, industry and government sources, this study focusses on the emergence of four major factors found to significantly influence the considerations held by consumers toward the adoption of driverless technologies: driver liability, occupant safety, occupant control and understanding of their autonomous vehicles and ethical concerns arising from increased autonomy.
 \end{abstract}
 
@@ -366,28 +368,267 @@ Email: clg11@aber.ac.uk}}
 
 \section{Introduction}
 
-In the year of 1886, Karl Benz designed, built and patented the world's first petrol-powered automobile \cite{karl-benz}. Now widely considered as the birth of the modern motor vehicle, this event would set alight a revolution in human transportation, becoming the driving force behind some of the most important technological innovations of the past two centuries. 
+In the year 1886, Karl Benz designed, built and patented the world's first petrol-powered automobile \cite{karl-benz}. Now widely considered as the birth of the modern motor vehicle, this event would set alight a revolution in human transportation, becoming the driving force behind some of the most important technological innovations of the past two centuries. 
 
 %The journey toward producing safe and affordable transportation for the masses, has given rise to many advancements with implications extending far beyond the bounds of automotive engineering. 
 
-The introduction of moving assembly-line production and ``just-in-time" (JIT) delivery of parts has transformed the way in which complex products such as vehicles and electronic goods could be mass-produced. Anti-lock braking systems (ABS), airbags and seat belts refer to just a small proportion of safety devices now known to be crucial in maximising passenger safety, with many finding applications far beyond the area of personal transportation (e.g. lap belts on roller-coasters \cite{roller-coaster-lap-belt} and airbag landing systems for space probes \cite{airbag-landing}). Vehicle insurance brought along financial protection for both drivers and accident victims against potential liability in the case of traffic collisions, helping to make driving both more affordable, and financially accountable. 
+%The introduction of moving assembly-line production and ``just-in-time" (JIT) delivery of parts has transformed the way in which complex products such as vehicles and electronic goods can be mass-produced, leading to cheaper costs for manufactures, and consequently lower prices for consumers. Anti-lock braking systems (ABS), airbags and seat belts refer to just a small proportion of safety devices now known to be crucial in maximising passenger safety, with many finding applications far beyond the area of personal transportation (e.g. lap belts on roller-coasters \cite{roller-coaster-lap-belt} and airbag landing systems for space probes \cite{airbag-landing}). Vehicle insurance has brought along financial protection against liability in the case of traffic collisions, helping to make driving more affordable for drivers, and safer by making drivers financially accountable for their actions. 
 
-%%
-%%leading to a dramatic increase in production efficiency and a consequential decrease in associated cost, with savings passed on to consumers in the form of cheaper purchase prices. 
+As technology has moved into the digital age, the automotive industry has remained a major ambassador for new development. Satellite navigation, cruise control and automatic emergency braking all represent examples of autonomous technologies that have since become mainstream as part of our modern-day society. 
+
+With progress in automation and artificial intelligence showing no signs of slowing down, an increasing level of attention is being directed toward the discussion surrounding the notion of fully-autonomous vehicles, in which the human driver no longer has to maintain focus on the road ahead.
+
+ Over the past couple of years, discussion has poured out from the confines of industry and into the public sphere. This has been popularised by the launch of high profile projects such as the Google self-driving car \cite{google-project}, and the introduction of semi-autonomous driving technologies such as the Tesla Autopilot system \cite{tesla-autopilot}.
+ 
+ Today, there is little doubt as to the expectation for autonomous vehicles to arrive on future roads. In a recent survey looking at public opinion toward automated driving, Kyriakidis et al. found 69 percent of 5000 public respondents predicted driverless cars to hold 50 percent of the total market share by 2050 \cite{kyriakidis}. Industry experts have exhibited an even greater level of optimism, believing that such technology will have become part of everyday life by as early as 2040 \cite{action-for-roads}.
+ 
+ Upon face value, autonomous vehicles look set to provide significant safety, economic and environmental benefits. At the top of these advancements, we find promises of fewer traffic-related deaths and injuries; greater fuel efficiency; eased road congestion; and greater access to mobility for disadvantaged groups (including disabled, young and elderly individuals) \cite{action-for-roads}. 
+ 
+While most acknowledge that autonomous vehicles are set to bring major reform to our increasingly overwhelmed transportation infrastructures, there remains a great deal of concern and pessimism over the legal, ethical, security and safety considerations that today remain largely without resolution. 
 %
-%  have all played critical role in maximising passenger safety across all forms of civilian transportation (including road, rail, marine and aviation). Many of these systems have found uses in other diverse areas of industry, including the entertainment and aerospace sectors 
+%This paper provides a study into current work within the software industry that is seeking to address four key factors found to highly influence public trust - and ultimate acceptance - of driverless technologies.
 %
+%This paper provides a study into work being undertaken to address four key factors related to the development of automation software found to highly influence public trust - and ultimate acceptance - of driverless technologies. 
 
-%Today, insurance has a major societal role, providing a vital means of safeguarding both individuals and businesses against the potential for risk and personal loss across a wide variety of unfavourable situations.
 
-As technology has moved into the digital age, the automotive industry has remained a major ambassador for new development. Satellite navigation, cruise control and automatic emergency braking all represent examples of autonomous technology that  have since become mainstream as part of modern society. 
+%This paper provides a study into work currently underway with the software industry, seeking to address four key considerations  development of automation software found to highly influence public trust - and ultimate acceptance - of driverless technologies. 
 
-As progress in automation and artificial intelligence technologies continues to accelerate, the notion of fully-autonomous vehicles - in which the human driver no longer has to maintain focus on the road ahead - has been steadily gathering pace, with experts predicting such technology will become a part of everyday life by 2040 \cite{action-for-roads}. Over the past couple of years, the discussion of driverless vehicles has poured out from the confines of industry and into the public sphere, popularised by the launch of high profile  projects such as the Google self-driving car \cite{google-project}, and the introduction of semi-autonomous driving technologies such as the Tesla Autopilot system \cite{tesla-autopilot}. 
+ This paper provides a review of literature into the work being undertaken to address factors found to exhibit significant influence over public trust - and ultimate acceptance - of driverless vehicles, with particular focus given within the context of the software industry as a principal contributor toward the enablement of intelligent vehicles. In this investigation, four key factors are considered: the testing and verification of autonomous systems; the redefinition of driver roles and associated impacts on passenger ergonomics; ethical considerations arising from increased reliance on autonomous decision-making; and the distinction between driver vs. manufacturer liability in the case of accidents involving autonomous vehicles. 
+ 
+ In defining what constitutes an `autonomous vehicle' within the context of this investigation, readers are referred to levels four and five of the On-Road Motor Vehicle Automated Driving Systems classification taxonomy published by the Society of Automotive Engineers (SAE) \cite{sae-automated-list}.
+ 
+ The outline for the remainder of this paper is as follows. Section 2 discusses the issue of  incompatibility between existing legal frameworks relating to driver liability, and the undisputed rise in the potential for traffic accidents involving vehicles operating exclusively under autonomous control. 
+ 
+Section 3 provides enhanced focus on the considerations relating to the comprehensive testing and verification of autonomous vehicles, presenting work from a variety of academic and industry sources that sees software acting both as the subject and provider for new forms of testing strategies.
+
+Considerations relating to the transfer of driver responsibility from human to computer are discussed in Section 4. 
+
+Section 5 reviews the main ethical issues that continue to present a fundamental dilemma for software engineers, as they attempt to model the complex moral reasoning required when undertaking control of a potentially hazardous craft within real-world environments.
+
+Finally, Section 6 presents a selection of the author's own opinions pertaining to the works and ideas discussed throughout, in addition to highlighting areas where future work is likely to be needed in order to overcome remaining challenges.
+
+% Maybe add a bit about the history of autonomous vehicles
+
+\section{Liability Law \& Autonomous Vehicles}
+
+Whilst autonomous vehicles offer immense potential for reducing traffic-related injuries and fatalities, they will never be completely immune to the risk of crashing \cite{marchant}. Technology faults, security breaches, and misguided behaviour in response to abnormal environments; all represent potential factors for causing an automated driver to lose control of a moving vehicle. Regardless of the form a driver may take - human or computer - the consequences of vehicle accidents remain equally damaging; costed not just in terms of financial quantities, but often - for the most severe incidents - in the loss of human lives. 
+
+Under existing legislation, liability arising from a vehicle crash is typically apportioned between two key parties: (a) the human driver(s); or (b) the vehicle manufacturer(s) \cite{marchant}. The extent to which each party is found responsible will depend entirely on the unique circumstances surrounding each incident. In certain situations, responsibility may be attributed exclusively to the behaviour exhibited by one or more of the drivers involved (e.g. lack of adequate attention, driving under the influence of alcohol and/or banned substances etc.). For other incidents, vehicle defects may be found to represent the root cause, placing the onus on the vehicle manufacturer to compensate for loss or damage. In special cases, the evidence may find that neither party holds an enforceable proportion of the blame in light of extenuating circumstances (e.g. poor weather conditions, animals in the carriageway, vision impairment due to dazzling sunlight etc.) \cite{licence-to-skill}. 
+
+As the realisation of self-driving vehicles becomes ever more apparent, there exists growing concern amongst the legal, technical and insurance sectors as to the inadequacy of existing liability law in assessing where fault should lie in the case of an accident involving vehicles no longer under the influence of human control \cite{marchant} \cite{duffy}. Given that current laws surrounding vehicle liability tend to be based predominately around the notion that fault is likely to be at least in-part down to driver error, removing this factor from the liability equation naturally raises the question of who should instead take responsibility in their place. The conclusion reached by many, sees the vehicle manufacturer become the liable party, on account of their claim of overall responsibility for the system in control of the vehicle at the time in which it crashed (most likely found to be the result of: (a) some kind of vehicle defect; or (b) a case in which the control software encountered a situation that it was not able to handle in an appropriate fashion \cite{marchant}) \cite{duffy} \cite{beiker}. 
+
+Whilst from a legal perspective this deduction may seem clear-cut, there is great concern over the potential for this to elicit a detrimental ``\textit{chilling effect}" \cite{schellekens} onto the future introduction of autonomous vehicles, owing to the major disincentive that it provides to manufacturers who  naturally will become extremely cautious to the risk of substantially increasing the number and severity of liability cases brought against them \cite{marchant}. For the most part, there is strong agreement that autonomous vehicle technology is set to deliver major societal benefits, and as such,  work to protect and encourage innovation in this area should be viewed as an important priority for courts and policymakers \cite{marchant}. Whilst this advocation of driverless technology is found to be shared widely across the  literature studied for this review, ideas and opinions begin to diverge significantly when discussion turns to how future liability cases should be assessed so to ensure that a fair balance is struck between shielding vehicle manufacturers from an overwhelming level of personal liability, and continuing to guarantee rightful justice for accident victims \cite{schellekens}.
+
+In analysing the proposals suggested across the range of surveyed literature, two predominant themes begin to emerge: \textbf{(a)} the transference of responsibility from manufacturers to vehicle owners; and \textbf{(b)} the introduction of governmental and/or legislative protection for manufacturers against common liability claims involving autonomous vehicles.
+
+\subsection{Apportioning Liability onto Vehicle Owners}
+
+For legal cases involving an accusation of liability against another person or company, one the most critical facts that a court must determine is the extent to which the prosecution (normally the person(s) injured or otherwise affected) knew of, and voluntarily accepted, the risks involved in undertaking the activity that they wish to claim loss or damage against \cite{tort-law}. In the case where a court finds that sufficient knowledge of the potential risks was indeed held and accepted by the aggrieved party, they may subsequently elect to throw out the case through the defence of \textit{assumed risk} \cite{marchant}.
+
+ In their paper comprehensively examining the liability implications arising from the introduction of driverless technologies, Marchant and Lindor propose that this same defence may help to provide liability protection for manufacturers of automated vehicles, by effectively reinstating the vehicle owner as the significant liable party; by account of their understanding and agreement to take on the risks associated with owning and using the vehicle on public roads \cite{marchant}. For such a defence to become tenable, manufacturers would be required to enforce some kind of disclaimer giving evidence to fact that a buyer had willingly accepted to take ownership of the risks disclosed by the manufacturer upon agreement to purchase the vehicle. However, even with such evidence, courts are not under any obligation to accept this defence, with rulings often continuing to find in favour of the prosecution in cases where assumption of risk is raised as only a single form of defence on behalf the defendant \cite{marchant}. 
+ 
+Another aspect of tort law that may become critical to assessing the liability of  actions made by autonomous vehicles, is the application of rules that impose \textit{strict liability} upon those persons who hold legal ownership over a vehicle recognised to be chattel\footnote{A `chattel' is an item of movable property that is legally recognised as a personal possession of its owner \cite{chattel}.} \cite{duffy}. Under the standard imparted by strict liability, a person is held legally responsible for any damage, loss or injury that may be incurred regardless of whether or not they are directly culpable for the causes leading to such consequences \cite{intro-financial-planning}. Crucially, strict liability holds no requirement for the prosecution to prove fault on the part of the defendant; but must only convince the court that damage and/or injury was afflicted, and that the defendant was responsible at the time the incident occurred \cite{cantu}. 
+
+A popular example for illustrating the concept of strict liability focusses itself around a tiger rehabilitation centre. In the hypothetical event that a tiger escapes from its cage and goes on to inflict damage or injury, the owner of the centre is automatically held liable regardless of how strong the cage meant to contain the animal was designed to be \cite{intro-financial-planning}. A second example describes a situation where a contractor employs a sub-contractor who fails to hold adequate insurance. In the event that the subcontractor performs an action that causes either damage or injury to property or other persons, it is the main contractor who is held strictly liable for dealing with the consequences \cite{intro-financial-planning}. 
+
+%In examining the suitability of strict liability to case of autonomous vehicles, Duffy and Hopkins make reference to an unlikely case subject in the form of the existing liability laws surrounding canine ownership \cite{duffy}.  
+
+In examining the suitability of enforcing strict liability onto owners of autonomous vehicles, Duffy and Hopkins \cite{duffy} look to the existing laws surrounding the ownership of an unlikely equivalent; man's best friend, the faithful dog.
+
+
+%draw on an unlikely association between the laws surrounding ownership of computers and dogs
+
+Within a court of law, a dog is not viewed as a legal entity in their own right,  and instead are recognised to be the personal property (chattel) of their owner, typically defined as the person in charge of and responsible for the care and wellbeing of the animal in the capacity of a domestic pet \cite{pet-law}.
+
+The implications of this are such that, in the event that a dog was found to cause harm upon another animal or person, it would be the owner who is held liable for any damages, regardless of whether or not they themselves are found to be directly culpable to the actions of their pet \cite{duffy}. 
+
+The importance of imposing strict liability in such cases, arises from the fact that dogs possess the capability to act independently of the intentions and wishes of their owners (although of course instances do exist in which the actions of a domestic animal are found to be directly attributable to unfavourable human influence (i.e. in training a dog to show aggression toward other canines or persons)). Despite this, it remains the responsibility of the owner to take appropriate measures in order to prevent such behaviour from taking place \cite{duffy}.
+
+% which may result in them undertaking behaviour that cannot necessarily be attributed to the  of their owners  \cite{duffy}.
+
+The defining proposal outlined by Duffy and Hopkins \cite{duffy} suggests: as both independently-capable yet legally-unrecognised items of personal property, dogs and autonomous vehicles should be treated under the same strict liability ownership laws, as such as scheme encourages owners to take every possible precaution to the avoidance of damage or injury, given an understanding of their obligations to liability in the event than an incident occurs \cite{duffy}. 
+
+This, the authors argue, represents the fairest means of determining liability in the absence of a human driver, whilst continuing to ensure that victims are adequately protected against bearing the cost of any damage and/or injuries they may sustain. 
+
+It becomes easy for one to foresee the potential disincentive that strict liability offers to consumers, given the risk it presents for a considerable rise in insurance prices owing to the increased onus placed upon individual owners to compensate for damage costs \cite{duffy}. 
+
+However, with autonomous vehicles largely anticipated to increase traffic safety and reduce collision rates \cite{duffy, marchant, schellekens}, many expect this will in turn work to negate potential insurance hikes on account of a re-fortified vote in confidence for driverless technology on the part of insurers \cite{duffy, marchant}. 
+
+Although cases involving strict liability often allow for rulings to be reached more quickly - indeed, this is commonly viewed to be a strong advantage for courts handling high-volume civil litigations such as product liability or personal negligence \cite{duffy} - owners of autonomous vehicles may still be acquitted if it can be proven that damage or injury was inflicted as a consequence of extenuating circumstances, that lie outside of an appropriate-degree of personal control; including, but not limited to, victim negligence or a serious component defect and/or malfunction \cite{duffy}.
+
+
+In the papers reviewed thus far, we have seen strong advocation for protecting manufacturers from the risk of increased liability, under efforts to safeguard the future development of driverless technologies and the potential they bring to enhance vehicle safety, efficiency and accessibility. \cite{beiker, schellekens, marchant}. 
+
+%An alternative point of view raised by Gurney \cite{gurney},  
+
+In the case of Gurney \cite{gurney}, the author raises an albeit more `symmetric' point-of-view; proposing that liability should not simply be assigned indiscriminately to one or other party, but instead should be apportioned according to \textit{``...the nature of the driver, and the ability of that person to prevent the accident"} whilst the car is operating under autonomous mode. 
+
+To outline their argument, the author presents four alternative case studies: \textit{``the Distracted Driver} - a person otherwise engaged in another task drawing their attention away from the road ahead; \textit{``the Diminished Capabilities Driver} - a person who exhibits a reduced ability to assume control over an autonomous driver (e.g. an elderly, young or intoxicated individual); \textit{``the Disabled Driver"} - a person who possesses some from of disability that prevents them from driving under manual control; and finally \textit{``the Attentive Driver"} - as a person who possesses the foresight and capabilities to prevent an accident from occurring \cite{gurney}. 
+
+ By examining the unique circumstances of each case, and the relative ability of each driver to intervene in the event of a crash, the author shows that a fair assessment of liability can only be reached when these capabilities are considered under a court's ruling. For example, a disabled driver is likely to have a reduced chance of correcting the course of a careering vehicle in comparison to an able-bodied person. Therefore, in this instance, the author advocates for the manufacturer to be held liable, given that the vehicle has been deemed suitable for use by persons who would otherwise be unable to operate a manually-driven vehicle due to their disability. In a more complex case involving a distracted driver, the author proposes that it would be reasonable for a court to expect such a person to intervene in preventing a collision, given sufficient and adequate warning by the system as to the impending failure of the autonomous driver to maintain control \cite{gurney}. 
+
+Whilst this approach allows for a tailored assessment of liability to be drawn for each independent case, there are some potential problems that must be considered also. First and foremost, in the case of a liability claim involving an autonomous vehicle, under what evidence could it be proven that an occupant  exhibited behaviour attributed to that of an attentive driver, rather than the case a defence is likely to put forward in that the driver was distracted? Although in-car video recording may contribute as evidence in such cases, this raises significant questions over the issue of occupant privacy \cite{marshall}, and the extent to which this evidence could be found to give sufficient corroboration as to the driver's ability to assume control when alerted to warnings given by the vehicle's software.
+
+Secondly, by requiring courts to examine the specifics of each claim on a case-by-case basis, lawsuits involving autonomous vehicles can naturally be expected to place increasing pressure on the civil court system as the number of cases increases with the rate of adoption for the technology \cite{marchant}. It is for this reason, that both Marchant and Lindor \cite{marchant} and Duffy and Hopkins \cite{duffy} suggest imparting liability on the vehicle owner in the default case prevents courts from having to invest their resources into determining the exact cause in each and every case brought before them.
+
+In all of the above cases, insurance for autonomous vehicles has been viewed predominantly as a disincentive for owners - a part of the problem, rather than the solution. Schellekens \cite{schellekens} takes an albeit more favourable view, proposing to distribute the cost of liability damages across the wider population of autonomous vehicle owners through a system of \textit{``obligatory insurance [...] where the duty to insure rests on the holder of the vehicle."}. To give support and context to their argument, they refer to existing legislation adopted in Sweden, which enforces a rule of obligatory first-party insurance to cover strictly for damages incurred by accident victims \cite{schellekens}. Under such practices, compensation for the victim is given precedence over determining liability \cite{schellekens} - the driver's insurance is always expected to pay out for damages to the victim, before attempting to claim back any costs through civil proceedings at a later date \cite{schellekens}.
+
+\subsection{Legislative Protection}
+
+For law makers tasked with determining responsibility in the case of driverless vehicle accidents, a significant dilemma stems from the contention that both parties exhibit toward accepting liability, and the implications that this raises toward the potential development and adoption of autonomous vehicles. On the one hand, manufacturers show a distinct level of trepidation and cautiousness toward placing themselves in a position of increased liability by fronting  development in the technologies necessary to make driverless vehicles a reality. On the other hand, consumers are unlikely to show interest or willing in investing in a technology which either: (a) elicits them personally responsible for damages caused from their autonomous vehicle going awry; or (b) raises insurance costs to a point where autonomous vehicles no longer represent good value for money.
+
+An alternative approach that may help to reduce the liability concerns that lay threat to the integration of driverless vehicles, would be the introduction of legislative protection for manufacturers, to either limit, or remove the degree of liability that could be brought against them \cite{marchant}. This would in effect continue to leave manufacturers as the party held primarily responsible in the majority of cases, but prevents prosecutors from collecting excessive  payouts on account of the manufacturer's culpability \cite{marchant}. Whilst such an approach would likely appease some of the apprehensions raised on behalf the automotive industry, new issues begin to emerge over the negative 
+	impacts this may have on degree to which manufacturers will remain incentivised to push for improvements in product safety under efforts to reduce their own liability \cite{marchant}. Therefore, it will become essential that such measures are taken with a view to find an optimal balance between stimulating continued innovation and maximising public safety. 
+	
+	Although legislative intervention is not taken lightly for protecting individual technologies and industries from excessive liability \cite{marchant}, statutes such as the Oil Pollution Act (1990) \cite{oil-pollution-act} and the Price-Anderson Nuclear Industries Indemnities Act (1957) \cite{nuclear-act} represent examples of where federal legislation has successfully been introduced to defend organisations and industries from suffering an intolerable degree of financial burden as a consequence of major disasters or incidents. Prominent examples include the \$71 million that was awarded to help cover the costs of claims following the 1979 \textit{Three Mile Island} partial nuclear meltdown \cite{three-mile-island}; and the cap of \$75 million placed upon damages payable by BP following the \textit{Deepwater Horizon} explosion and subsequent oil spill back in 2010 \cite{deepwater}.
+
+
+% Of course, legislative protection in the case automative manufacturers sets a precedent for comparative technologies.
+
+% Where do we set the limit/draw the line of protection coverage?
+
+% How do we determine what represents an incident "sufficient enough" for protection to be awarded? - i.e. any type of car crash or only "major recalls"?
+
+% The answers to these questions at present, remain yet to be determined.
+
+
+
+
+		
+%impacts that this may have on the incentives of manufacturers
+
+
+   
+
 %
-% that brings automatic lane change, steering and parking capabilities to the company's line of electric vehicles.
+%of clear impartiality and a strong understanding of the implications that the various positive and negative incentives will have on 
 
-%As vehicles have begun to exhibit increasing levels of automation, over time drivers have become normalised to the idea of delegating specific aspects of driving over to a computer, and in doing so implanting their trust in those systems and their creators to perform as expected.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%The dilemma facing law makers who are tasked with determining responsibility in the case of driverless vehicle accidents, 
+%
+%The issue of assigning responsibility to one or either the driver or manufacturer in the case of driverless vehicle accidents represents a significant dilemma  
+%
+%
+%
+%contenious issue on both sides of the argument
+%
+%and/or the distribution of liability costs across the consumer market
+
+
+
+%that may be used to enforce prosecution against them in the event of damage or injury they may cause \cite{duffy}. Instead, both are deemed to be the personal property (chattel) of their owner, who - as someone recognised as having a legal identity - is automatically held accountable in the case of that either 
+%
+%being the personal property (chattel) of their owner, and as such are not deemed to hold legal standing that could be  
+%
+%
+%neither a computer nor a dog can be deemed to be a legal person in their own right, 
+
+%Providing one of the first comprehensive law reviews examining the liability implications arising from the introduction of driverless technotlogies, Marchant and Lindor \cite{marchant} suggest manufacturers could potentially use 
+%
+%one approach to protecting manufacturers from further liability could be to 
+%
+%
+%
+% vehicle owners as the significant liable party through the existing defence of \textit{assumed risk}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+%three alternative policy mechanisms 
+%
+%Published in 2012, the work of  was one the first papers to focus . In support of their the need to protect manufacturers from increased liability, the authors introduce three alternative legal and policy mechanisms for offering protection to manufacturers against increased liability. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%their exists a strong consensus as to the need for a significant overhaul of existing policies, laws and technical standards in order to prepare for the novel - and yet unencountered - challenges associated with successfully integrating autonomous vehicles into our existing democratic societal systems. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%Whilst the works studied for this report share a agreement as to the need for revision of our existing legal frameworks so that they may govern where liability should be placed in the event of a `driverless' crash, ideas and opinions begin to diverge when discussion turns toward what types of changes are likely to be required, and how these should be implemented in order to guarantee the balance between fairness and rightful justice in such cases. 
+%
+%%and - perhaps more importantly - how these should be implemented to ensure a fair comprise between accepting responsibl.
+%
+%A paper commonly cited in discussions surrounding the legal aspects of autonomous vehicles is that of the work by Marchant and Lindor \cite{marchant}, in which the authors discuss in exacting detail, their predictions relating to how, and in what form, the legal system can be expected to evolve, in order to establish fair and practical measures for determining legal liability in future traffic incidents. Within their work, the authors discuss the introduction of autonomous driving systems is set to trigger a profound shift in the dynamics associated with apportioning responsibility for a crash involving an autonomous vehicle.
+%
+%By replacing the driver with a software equivalent, the authors argue that manufacturers will implicitly redirect greater legal responsibility onto themselves (and potentially their suppliers), under the premise that the cause of a vehicle crash, whilst operating under autonomous control, could no longer be attributable to human error, and instead would 
+%
+%%In either case, manufacturers can expect to see a substantial increase in the number and severity of liability cases brought against them. 
+%
+%With manufacturers naturally set to exhibit trepidation toward the substantial increase in the number and severity of liability cases brought against them, the authors highlight that this situation poses a potentially detrimental barrier to the mainstream introduction of autonomous vehicles, extending beyond those raised through any remaining technical limitations or economic factors \cite{marchant}. 
+%
+%One of the key discussion topics found across many papers, 
+%previously determined to be the result of human error, to now fall
+ 
+%The potential consequences arising from vehicle accidents demonstrate no regard for who - or what - held 
+%
+%Regardless of whether an accident is the cause of human or software error, the potential consequences that can ensue remain the same; ranging from minor vehicle or property damage caused to one or both parties; up to in the most severe cases, the loss of human life. 
+
+
+% In particular, this section looks to analyse how the impacts of increased liability upon manufacturers may affect the approach and attitude taken towards the design, implementation, testing and deployment of driverless software.
+
+ 
+ 
+ \section{Ethical \& Moral}
+ 
+% A paper that refers back to the discussion of liability apportion.
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
@@ -484,9 +725,7 @@ As progress in automation and artificial intelligence technologies continues to 
 % \fnbelowfloat command of the stfloats package.
 
 
-
-
-\section{Conclusion}
+\section{Future Work \& Conclusion}
 
 
 

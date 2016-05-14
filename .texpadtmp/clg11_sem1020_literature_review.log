@@ -1,0 +1,368 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.1)  14 MAY 2016 23:00
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**clg11_sem1020_literature_review.tex
+(./clg11_sem1020_literature_review.tex
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+(./IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen102
+\@IEEEtrantmpdimenB=\dimen103
+\@IEEEtrantmpdimenC=\dimen104
+\@IEEEtrantmpcountA=\count79
+\@IEEEtrantmpcountB=\count80
+\@IEEEtrantmpcountC=\count81
+\@IEEEtrantmptoksA=\toks14
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 503.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen105
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen106
+\CLASSINFOnormalsizeunitybaselineskip=\dimen107
+\IEEEnormaljot=\dimen108
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+\IEEEquantizedlength=\dimen109
+\IEEEquantizedlengthdiff=\dimen110
+\IEEEquantizedtextheightdiff=\dimen111
+\IEEEilabelindentA=\dimen112
+\IEEEilabelindentB=\dimen113
+\IEEEilabelindent=\dimen114
+\IEEEelabelindent=\dimen115
+\IEEEdlabelindent=\dimen116
+\IEEElabelindent=\dimen117
+\IEEEiednormlabelsep=\dimen118
+\IEEEiedmathlabelsep=\dimen119
+\IEEEiedtopsep=\skip41
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@IEEEsubequation=\count86
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count87
+\c@table=\count88
+\@IEEEeqnnumcols=\count89
+\@IEEEeqncolcnt=\count90
+\@IEEEsubeqnnumrollback=\count91
+\@IEEEquantizeheightA=\dimen120
+\@IEEEquantizeheightB=\dimen121
+\@IEEEquantizeheightC=\dimen122
+\@IEEEquantizeprevdepth=\dimen123
+\@IEEEquantizemultiple=\count92
+\@IEEEquantizeboxA=\box26
+\@IEEEtmpitemindent=\dimen124
+\IEEEPARstartletwidth=\dimen125
+\c@IEEEbiography=\count93
+\@IEEEtranrubishbin=\box27
+) (/Users/connorgoddard/Google Drive/University Work/Masters/Advanced Software Engineering/Assignments/Literature Review/sem1020-litreview/.texpadtmp/clg11_sem1020_literature_review.aux)
+\openout1 = `clg11_sem1020_literature_review.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 315.
+LaTeX Font Info:    ... okay on input line 315.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 315.
+LaTeX Font Info:    ... okay on input line 315.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 315.
+LaTeX Font Info:    ... okay on input line 315.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 315.
+LaTeX Font Info:    ... okay on input line 315.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 315.
+LaTeX Font Info:    ... okay on input line 315.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 315.
+LaTeX Font Info:    ... okay on input line 315.
+
+-- Lines per column: 56 (exact).
+
+LaTeX Warning: Citation `karl-benz' on page 1 undefined on input line 372.
+
+
+LaTeX Warning: Citation `google-project' on page 1 undefined on input line 382.
+
+
+LaTeX Warning: Citation `tesla-autopilot' on page 1 undefined on input line 382.
+
+
+LaTeX Warning: Citation `kyriakidis' on page 1 undefined on input line 384.
+
+
+LaTeX Warning: Citation `action-for-roads' on page 1 undefined on input line 384.
+
+
+LaTeX Warning: Citation `action-for-roads' on page 1 undefined on input line 386.
+
+
+LaTeX Warning: Citation `sae-automated-list' on page 1 undefined on input line 399.
+
+[1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
+
+LaTeX Warning: Citation `marchant' on page 2 undefined on input line 415.
+
+
+LaTeX Warning: Citation `marchant' on page 2 undefined on input line 417.
+
+
+LaTeX Warning: Citation `licence-to-skill' on page 2 undefined on input line 417.
+
+
+LaTeX Warning: Citation `marchant' on page 2 undefined on input line 419.
+
+
+LaTeX Warning: Citation `duffy' on page 2 undefined on input line 419.
+
+
+LaTeX Warning: Citation `marchant' on page 2 undefined on input line 419.
+
+
+LaTeX Warning: Citation `duffy' on page 2 undefined on input line 419.
+
+
+LaTeX Warning: Citation `beiker' on page 2 undefined on input line 419.
+
+
+LaTeX Warning: Citation `schellekens' on page 2 undefined on input line 421.
+
+
+LaTeX Warning: Citation `marchant' on page 2 undefined on input line 421.
+
+
+LaTeX Warning: Citation `marchant' on page 2 undefined on input line 421.
+
+
+LaTeX Warning: Citation `schellekens' on page 2 undefined on input line 421.
+
+
+LaTeX Warning: Citation `tort-law' on page 2 undefined on input line 427.
+
+
+LaTeX Warning: Citation `marchant' on page 2 undefined on input line 427.
+
+
+LaTeX Warning: Citation `marchant' on page 2 undefined on input line 429.
+
+
+LaTeX Warning: Citation `marchant' on page 2 undefined on input line 429.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 431.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 431.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 431.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 431.
+
+LaTeX Warning: Citation `chattel' on page 2 undefined on input line 431.
+
+
+LaTeX Warning: Citation `duffy' on page 2 undefined on input line 431.
+
+
+LaTeX Warning: Citation `intro-financial-planning' on page 2 undefined on input line 431.
+
+
+LaTeX Warning: Citation `cantu' on page 2 undefined on input line 431.
+
+[2]
+
+LaTeX Warning: Citation `intro-financial-planning' on page 3 undefined on input line 433.
+
+
+LaTeX Warning: Citation `intro-financial-planning' on page 3 undefined on input line 433.
+
+
+LaTeX Warning: Citation `duffy' on page 3 undefined on input line 437.
+
+
+LaTeX Warning: Citation `pet-law' on page 3 undefined on input line 442.
+
+
+LaTeX Warning: Citation `duffy' on page 3 undefined on input line 444.
+
+
+LaTeX Warning: Citation `duffy' on page 3 undefined on input line 446.
+
+
+LaTeX Warning: Citation `duffy' on page 3 undefined on input line 450.
+
+
+LaTeX Warning: Citation `duffy' on page 3 undefined on input line 450.
+
+
+Underfull \hbox (badness 1769) in paragraph at lines 450--451
+\OT1/ptm/m/n/10 [[]] sug-gests: as both independently-capable yet legally-
+ []
+
+
+LaTeX Warning: Citation `duffy' on page 3 undefined on input line 454.
+
+
+LaTeX Warning: Citation `duffy' on page 3 undefined on input line 456.
+
+
+LaTeX Warning: Citation `marchant' on page 3 undefined on input line 456.
+
+
+LaTeX Warning: Citation `schellekens' on page 3 undefined on input line 456.
+
+
+LaTeX Warning: Citation `duffy' on page 3 undefined on input line 456.
+
+
+LaTeX Warning: Citation `marchant' on page 3 undefined on input line 456.
+
+
+LaTeX Warning: Citation `duffy' on page 3 undefined on input line 458.
+
+
+LaTeX Warning: Citation `duffy' on page 3 undefined on input line 458.
+
+
+LaTeX Warning: Citation `beiker' on page 3 undefined on input line 461.
+
+
+LaTeX Warning: Citation `schellekens' on page 3 undefined on input line 461.
+
+
+LaTeX Warning: Citation `marchant' on page 3 undefined on input line 461.
+
+
+LaTeX Warning: Citation `gurney' on page 3 undefined on input line 465.
+
+
+LaTeX Warning: Citation `gurney' on page 3 undefined on input line 467.
+
+
+LaTeX Warning: Citation `gurney' on page 3 undefined on input line 469.
+
+[3]
+
+LaTeX Warning: Citation `marshall' on page 4 undefined on input line 471.
+
+
+LaTeX Warning: Citation `marchant' on page 4 undefined on input line 473.
+
+
+LaTeX Warning: Citation `marchant' on page 4 undefined on input line 473.
+
+
+LaTeX Warning: Citation `duffy' on page 4 undefined on input line 473.
+
+
+LaTeX Warning: Citation `schellekens' on page 4 undefined on input line 475.
+
+
+LaTeX Warning: Citation `schellekens' on page 4 undefined on input line 475.
+
+
+LaTeX Warning: Citation `schellekens' on page 4 undefined on input line 475.
+
+
+LaTeX Warning: Citation `schellekens' on page 4 undefined on input line 475.
+
+
+LaTeX Warning: Citation `marchant' on page 4 undefined on input line 481.
+
+
+LaTeX Warning: Citation `marchant' on page 4 undefined on input line 481.
+
+
+LaTeX Warning: Citation `marchant' on page 4 undefined on input line 482.
+
+
+LaTeX Warning: Citation `marchant' on page 4 undefined on input line 484.
+
+
+LaTeX Warning: Citation `oil-pollution-act' on page 4 undefined on input line 484.
+
+
+LaTeX Warning: Citation `nuclear-act' on page 4 undefined on input line 484.
+
+
+LaTeX Warning: Citation `three-mile-island' on page 4 undefined on input line 484.
+
+
+LaTeX Warning: Citation `deepwater' on page 4 undefined on input line 484.
+
+
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the appropriate paper size.
+
+[4] (/Users/connorgoddard/Google Drive/University Work/Masters/Advanced Software Engineering/Assignments/Literature Review/sem1020-litreview/.texpadtmp/clg11_sem1020_literature_review.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1085 strings out of 493089
+ 20792 string characters out of 6134843
+ 83719 words of memory out of 5000000
+ 4630 multiletter control sequences out of 15000+600000
+ 39707 words of font info for 73 fonts, out of 8000000 for 9000
+ 1144 hyphenation exceptions out of 8191
+ 26i,8n,22p,1271b,236s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "/Users/connorgoddard/Google Drive/University Work/Masters/Advanced Software Engineering/Assignments/Literature Review/sem1020-litreview/.texpadtmp/clg11_sem1020_literature_review.pdf" (4 pages, 72917 bytes).
+PDF statistics:
+ 34 PDF objects out of 1000 (max. 8388607)
+ 23 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
