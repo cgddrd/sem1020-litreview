@@ -309,8 +309,14 @@
 
 
 % correct bad hyphenation here
-\hyphenation{op-tical net-works semi-conduc-tor}
+%\hyphenation{op-tical net-works semi-conduc-tor}
 
+% CG - Correct Long URL break in bibtex.
+% See: https://norwied.wordpress.com/2012/07/10/how-to-break-long-urls-in-bibtex/for more information.
+\usepackage{url}
+\usepackage{breakurl}
+\usepackage[breaklinks]{hyperref}	
+\def\UrlBreaks{\do\/\do-}
 
 \begin{document}
 %
@@ -347,7 +353,7 @@ Email: clg11@aber.ac.uk}}
 % in the abstract
 \begin{abstract}
   As recent technical accomplishments continue to accelerate the notion of driverless vehicles from distant possibility toward tangible reality, increasing attention within this domain is focussed on addressing the social, legal and philosophical issues that are expected to represent significant barriers in the path toward mainstream adoption of fully-autonomous vehicles within our existing societal frameworks.
-  From surveying current literature obtained from a range of academic, industry and government sources, this study focusses on the emergence of four major factors found to significantly influence the considerations held by consumers toward the adoption of driverless technologies: driver liability, occupant safety, occupant control and understanding of their autonomous vehicles and ethical concerns arising from increased autonomy.
+  From surveying current literature obtained from a range of academic, industry and government sources, this study focusses on the emergence of three major factors found to significantly influence the considerations held by consumers toward the adoption of driverless technologies: driver vs. manufacturer liability, verification of integrity and safety for high-level autonomous systems and security risks arising from increased reliance upon computer-controlled safety-critical systems.
 \end{abstract}
 
 % no keywords
@@ -368,7 +374,7 @@ Email: clg11@aber.ac.uk}}
 
 \section{Introduction}
 
-In the year 1886, Karl Benz designed, built and patented the world's first petrol-powered automobile \cite{karl-benz}. Now widely considered as the birth of the modern motor vehicle, this event would set alight a revolution in human transportation, becoming the driving force behind some of the most important technological innovations of the past two centuries. 
+In the year 1886, Karl Benz designed, built and patented the world's first petrol-powered automobile \cite{carl-benz}. Now widely considered as the birth of the modern motor vehicle, this event would set alight a revolution in human transportation, becoming the driving force behind some of the most important technological innovations of the past two centuries. 
 
 %The journey toward producing safe and affordable transportation for the masses, has given rise to many advancements with implications extending far beyond the bounds of automotive engineering. 
 
@@ -385,45 +391,34 @@ With progress in automation and artificial intelligence showing no signs of slow
  Upon face value, autonomous vehicles look set to provide significant safety, economic and environmental benefits. At the top of these advancements, we find promises of fewer traffic-related deaths and injuries; greater fuel efficiency; eased road congestion; and greater access to mobility for disadvantaged groups (including disabled, young and elderly individuals) \cite{action-for-roads}. 
  
 While most acknowledge that autonomous vehicles are set to bring major reform to our increasingly overwhelmed transportation infrastructures, there remains a great deal of concern and pessimism over the legal, ethical, security and safety considerations that today remain largely without resolution. 
-%
-%This paper provides a study into current work within the software industry that is seeking to address four key factors found to highly influence public trust - and ultimate acceptance - of driverless technologies.
-%
-%This paper provides a study into work being undertaken to address four key factors related to the development of automation software found to highly influence public trust - and ultimate acceptance - of driverless technologies. 
-
-
-%This paper provides a study into work currently underway with the software industry, seeking to address four key considerations  development of automation software found to highly influence public trust - and ultimate acceptance - of driverless technologies. 
 
  This paper provides a review of literature into the work being undertaken to address factors found to exhibit significant influence over public trust - and ultimate acceptance - of driverless vehicles, with particular focus given within the context of the software industry as a principal contributor toward the enablement of intelligent vehicles. In this investigation, four key factors are considered: the testing and verification of autonomous systems; the redefinition of driver roles and associated impacts on passenger ergonomics; ethical considerations arising from increased reliance on autonomous decision-making; and the distinction between driver vs. manufacturer liability in the case of accidents involving autonomous vehicles. 
  
- In defining what constitutes an `autonomous vehicle' within the context of this investigation, readers are referred to levels four and five of the On-Road Motor Vehicle Automated Driving Systems classification taxonomy published by the Society of Automotive Engineers (SAE) \cite{sae-automated-list}.
+ In defining what constitutes an `autonomous vehicle' within the context of this investigation, readers are referred to levels four and five of the On-Road Motor Vehicle Automated Driving Systems classification taxonomy published by the Society of Automotive Engineers (SAE) \cite{sae}.
  
- The outline for the remainder of this paper is as follows. Section 2 discusses the issue of  incompatibility between existing legal frameworks relating to driver liability, and the undisputed rise in the potential for traffic accidents involving vehicles operating exclusively under autonomous control. 
+ The outline for the remainder of this paper is as follows. Section 2 discusses the issue of incompatibility between existing legal frameworks relating to driver liability, and the undisputed rise in the potential for traffic accidents involving vehicles operating exclusively under autonomous control. 
  
-Section 3 provides enhanced focus on the considerations relating to the comprehensive testing and verification of autonomous vehicles, presenting work from a variety of academic and industry sources that sees software acting both as the subject and provider for new forms of testing strategies.
+Section 3 provides enhanced focus on the considerations relating to the comprehensive testing and verification of autonomous vehicles, as they begin to exhibit increased high-level decision-making behaviours.
 
-Considerations relating to the transfer of driver responsibility from human to computer are discussed in Section 4. 
+Section 4 discusses the work of security researchers attempting to highlight existing vulnerabilities in present-day in-car vehicle systems, under efforts to shape future attitudes toward vehicle cyber-security prior to the introduction of fully-autonomous driving systems.
 
-Section 5 reviews the main ethical issues that continue to present a fundamental dilemma for software engineers, as they attempt to model the complex moral reasoning required when undertaking control of a potentially hazardous craft within real-world environments.
-
-Finally, Section 6 presents a selection of the author's own opinions pertaining to the works and ideas discussed throughout, in addition to highlighting areas where future work is likely to be needed in order to overcome remaining challenges.
-
-% Maybe add a bit about the history of autonomous vehicles
+Finally, Section 5 summarises and concludes the findings of the literature study, in addition to highlighting areas where future work is likely to be needed in order to overcome remaining challenges.
 
 \section{Liability Law \& Autonomous Vehicles}
 
 Whilst autonomous vehicles offer immense potential for reducing traffic-related injuries and fatalities, they will never be completely immune to the risk of crashing \cite{marchant}. Technology faults, security breaches, and misguided behaviour in response to abnormal environments; all represent potential factors for causing an automated driver to lose control of a moving vehicle. Regardless of the form a driver may take - human or computer - the consequences of vehicle accidents remain equally damaging; costed not just in terms of financial quantities, but often - for the most severe incidents - in the loss of human lives. 
 
-Under existing legislation, liability arising from a vehicle crash is typically apportioned between two key parties: (a) the human driver(s); or (b) the vehicle manufacturer(s) \cite{marchant}. The extent to which each party is found responsible will depend entirely on the unique circumstances surrounding each incident. In certain situations, responsibility may be attributed exclusively to the behaviour exhibited by one or more of the drivers involved (e.g. lack of adequate attention, driving under the influence of alcohol and/or banned substances etc.). For other incidents, vehicle defects may be found to represent the root cause, placing the onus on the vehicle manufacturer to compensate for loss or damage. In special cases, the evidence may find that neither party holds an enforceable proportion of the blame in light of extenuating circumstances (e.g. poor weather conditions, animals in the carriageway, vision impairment due to dazzling sunlight etc.) \cite{licence-to-skill}. 
+Under existing legislation, liability arising from a vehicle crash is typically apportioned between two key parties: \textbf{(a)} the human driver(s); or \textbf{(b)} the vehicle manufacturer(s) \cite{marchant}. The extent to which each party is found responsible will depend entirely on the unique circumstances surrounding each incident. In certain situations, responsibility may be attributed exclusively to the behaviour exhibited by one or more of the drivers involved (e.g. lack of adequate attention, driving under the influence of alcohol and/or banned substances etc.). For other incidents, vehicle defects may be found to represent the root cause, placing the onus on the vehicle manufacturer to compensate for loss or damage. In special cases, the evidence may find that neither party holds an enforceable proportion of the blame in light of extenuating circumstances (e.g. poor weather conditions, animals in the carriageway, vision impairment due to dazzling sunlight etc.) \cite{licence-to-skill}. 
 
-As the realisation of self-driving vehicles becomes ever more apparent, there exists growing concern amongst the legal, technical and insurance sectors as to the inadequacy of existing liability law in assessing where fault should lie in the case of an accident involving vehicles no longer under the influence of human control \cite{marchant} \cite{duffy}. Given that current laws surrounding vehicle liability tend to be based predominately around the notion that fault is likely to be at least in-part down to driver error \cite{marchant, beiker}, removing this factor from the liability equation naturally raises the question of who should instead take responsibility in their place. The conclusion reached by many, sees the vehicle manufacturer become the liable party, on account of their claim of overall responsibility for the system in control of the vehicle at the time in which it crashed (most likely found to be the result of: (a) some kind of vehicle defect; or (b) a case in which the control software encountered a situation that it was not able to handle in an appropriate fashion \cite{marchant}) \cite{duffy} \cite{beiker}. 
+As the realisation of self-driving vehicles becomes ever more apparent, there exists growing concern amongst the legal, technical and insurance sectors as to the inadequacy of existing liability law in assessing where fault should lie in the case of an accident involving vehicles no longer under the influence of human control \cite{marchant} \cite{duffy}. Given that current laws surrounding vehicle liability tend to be based predominately around the notion that fault is likely to be at least in-part down to driver error \cite{marchant, beiker}, removing this factor from the liability equation naturally raises the question of who should instead take responsibility in their place. The conclusion reached by many, sees the vehicle manufacturer become the liable party, on account of their claim of overall responsibility for the system in control of the vehicle at the time in which it crashed (most likely found to be the result of: \textbf{(a)} some kind of vehicle defect; or \textbf{(b)} a case in which the control software encountered a situation that it was not able to handle in an appropriate fashion \cite{marchant}) \cite{duffy} \cite{beiker}. 
 
-Whilst from a legal perspective this deduction may seem clear-cut, there is great concern over the potential for this to elicit a detrimental ``\textit{chilling effect}" \cite{schellekens} onto the future introduction of autonomous vehicles, owing to the major disincentive that it provides to manufacturers who  naturally will become extremely cautious to the risk of substantially increasing the number and severity of liability cases brought against them \cite{marchant}. For the most part, there is strong agreement that autonomous vehicle technology is set to deliver major societal benefits, and as such,  work to protect and encourage innovation in this area should be viewed as an important priority for courts and policymakers \cite{marchant}. Whilst this advocation of driverless technology is found to be shared widely across the  literature studied for this review, ideas and opinions begin to diverge significantly when discussion turns to how future liability cases should be assessed so to ensure that a fair balance is struck between shielding vehicle manufacturers from an overwhelming level of personal liability, and continuing to guarantee rightful justice for accident victims \cite{schellekens}.
+Whilst from a legal perspective this deduction may seem clear-cut, there is great concern over the potential for this to elicit a detrimental ``\textit{chilling effect}" \cite{schellekens} onto the future introduction of autonomous vehicles, owing to the major disincentive that it provides to manufacturers who  naturally are expected to demonstrate extreme caution toward the risk of substantially increasing the number and severity of liability cases brought against them \cite{marchant}. For the most part, there is strong agreement that autonomous vehicle technology is set to deliver major societal benefits, and as such,  work to protect and encourage innovation in this area should be viewed as an important priority for courts and policymakers \cite{marchant}. Whilst this advocation of driverless technology is found to be shared widely across the  literature studied for this review, ideas and opinions begin to diverge significantly when discussion turns to how future liability cases should be assessed so to ensure that a fair balance is struck between shielding vehicle manufacturers from an overwhelming level of personal liability, and continuing to guarantee rightful justice for accident victims \cite{schellekens}.
 
 In analysing the proposals suggested across the range of surveyed literature, two predominant themes begin to emerge: \textbf{(a)} the transference of responsibility from manufacturers to vehicle owners; and \textbf{(b)} the introduction of legislative protection for manufacturers against common liability claims involving autonomous vehicles.
 
 \subsection{Apportioning Liability onto Vehicle Owners}
 
-For legal cases involving an accusation of liability against another person or company, one the most critical facts that a court must determine is the extent to which the prosecution (normally the person(s) injured or otherwise affected) knew of, and voluntarily accepted, the risks involved in undertaking the activity that they wish to claim loss or damage against \cite{tort-law}. In the case where a court finds that sufficient knowledge of the potential risks was indeed held and accepted by the aggrieved party, they may subsequently elect to throw out the case through the defence of \textit{assumed risk} \cite{marchant}.
+For legal cases involving an accusation of liability against another person or company, one the most critical facts that a court must determine is the extent to which the prosecution (normally the person(s) injured or otherwise affected) knew of, and voluntarily accepted, the risks involved in undertaking the activity that they wish to claim loss or damage against. In the case where a court finds that sufficient knowledge of the potential risks was indeed held and accepted by the aggrieved party, they may subsequently elect to throw out the case through the defence of \textit{assumed risk} \cite{marchant}.
 
  In their paper comprehensively examining the liability implications arising from the introduction of driverless technologies, Marchant and Lindor propose that this same defence may help to provide liability protection for manufacturers of automated vehicles, by effectively reinstating the vehicle owner as the significant liable party; by account of their understanding and agreement to take on the risks associated with owning and using the vehicle on public roads \cite{marchant}. For such a defence to become tenable, manufacturers would be required to enforce some kind of disclaimer giving evidence to fact that a buyer had willingly accepted to take ownership of the risks disclosed by the manufacturer upon agreement to purchase the vehicle. However, even with such evidence, courts are not under any obligation to accept this defence, with rulings often continuing to find in favour of the prosecution in cases where assumption of risk is raised as only a single form of defence on behalf the defendant \cite{marchant}. 
  
@@ -433,9 +428,7 @@ A popular example for illustrating the concept of strict liability focusses itse
 
 In examining the suitability of enforcing strict liability onto owners of autonomous vehicles, Duffy and Hopkins \cite{duffy} look to the existing laws surrounding the ownership of an unlikely equivalent; man's best friend, the faithful dog.
 
-Within a court of law, a dog is not viewed as a legal entity in their own right,  and instead are recognised to be the personal property (chattel) of their owner, typically defined as the person in charge of and responsible for the care and wellbeing of the animal in the capacity of a domestic pet \cite{pet-law}.
-
-The implications of this are such that, in the event that a dog was found to cause harm upon another animal or person, it would be the owner who is held liable for any damages, regardless of whether or not they themselves are found to be directly culpable to the actions of their pet \cite{duffy}. 
+Within a court of law, a dog is not viewed as a legal entity in their own right,  and instead are recognised to be the personal property (chattel) of their owner, typically defined as the person in charge of and responsible for the care and wellbeing of the animal in the capacity of a domestic pet \cite{duffy}. The implications of this are such that, in the event that a dog was found to cause harm upon another animal or person, it would be the owner who is held liable for any damages, regardless of whether or not they themselves are found to be directly culpable to the actions of their pet. 
 
 The importance of imposing strict liability in such cases, arises from the fact that dogs possess the capability to act independently of the intentions and wishes of their owners (although of course instances do exist in which the actions of a domestic animal are found to be directly attributable to unfavourable human influence (i.e. in training a dog to show aggression toward other canines or persons)). Despite this, it remains the responsibility of the owner to take appropriate measures in order to prevent such behaviour from taking place \cite{duffy}.
 
@@ -457,7 +450,7 @@ To outline their argument, the author presents four alternative case studies: \t
 
  By examining the unique circumstances of each case, and the relative ability of each driver to intervene in the event of a crash, the author shows that a fair assessment of liability can only be reached when these capabilities are considered under a court's ruling. For example, a disabled driver is likely to have a reduced chance of correcting the course of a careering vehicle in comparison to an able-bodied person. Therefore, in this instance, the author advocates for the manufacturer to be held liable, given that the vehicle has been deemed suitable for use by persons who would otherwise be unable to operate a manually-driven vehicle due to their disability. In a more complex case involving a distracted driver, the author proposes that it would be reasonable for a court to expect such a person to intervene in preventing a collision, given sufficient and adequate warning by the system as to the impending failure of the autonomous driver to maintain control \cite{gurney}. 
 
-Whilst this approach allows for a tailored assessment of liability to be drawn for each independent case, there are some potential problems that must be considered also. First and foremost, in the case of a liability claim involving an autonomous vehicle, under what evidence could it be proven that an occupant  exhibited behaviour attributed to that of an attentive driver, rather than the case a defence is likely to put forward in that the driver was distracted? Although in-car video recording may contribute as evidence in such cases, this raises significant questions over the issue of occupant privacy \cite{marshall}, and the extent to which this evidence could be found to give sufficient corroboration as to the driver's ability to assume control when alerted to warnings given by the vehicle's software.
+Whilst this approach allows for a tailored assessment of liability to be drawn for each independent case, there are some potential problems that must be considered also. First and foremost, in the case of a liability claim involving an autonomous vehicle, under what evidence could it be proven that an occupant  exhibited behaviour attributed to that of an attentive driver, rather than the case a defence is likely to put forward in that the driver was distracted? Although in-car video recording may contribute as evidence in such cases, this raises significant questions over the issue of occupant privacy, and the extent to which this evidence could be found to give sufficient corroboration as to the driver's ability to assume control when alerted to warnings given by the vehicle's software.
 
 Secondly, by requiring courts to examine the specifics of each claim on a case-by-case basis, lawsuits involving autonomous vehicles can naturally be expected to place increasing pressure on the civil court system as the number of cases rises with the rate of adoption for the technology \cite{marchant}. It is for this reason, that both Marchant and Lindor \cite{marchant} and Duffy and Hopkins \cite{duffy} suggest imparting liability on the vehicle owner in the default case prevents courts from having to invest their resources into determining the exact cause in each and every case brought before them.
 
@@ -465,34 +458,21 @@ In all of the above cases, insurance for autonomous vehicles has been viewed pre
 
 \subsection{Legislative Protection}
 
-For law makers tasked with determining responsibility in the case of driverless vehicle accidents, a significant dilemma stems from the contention that both parties exhibit toward accepting liability, and the implications that this raises toward the potential development and adoption of autonomous vehicles. On the one hand, manufacturers show a distinct level of trepidation and cautiousness toward placing themselves in a position of increased liability by fronting  development in the technologies necessary to make driverless vehicles a reality. On the other hand, consumers are unlikely to show interest or willing to invest in a technology which either: (a) elicits them personally responsible for damages caused from their autonomous vehicle going awry; or (b) raises insurance costs to a point where autonomous vehicles no longer represent  value for money.
+For law makers tasked with determining responsibility in the case of driverless vehicle accidents, a significant dilemma stems from the contention that both parties exhibit toward accepting liability, and the implications that this raises toward the potential development and adoption of autonomous vehicles. On the one hand, manufacturers show a distinct level of trepidation and cautiousness toward placing themselves in a position of increased liability by fronting  development in the technologies necessary to make driverless vehicles a reality. On the other hand, consumers are unlikely to show interest or willing to invest in a technology which either: \textbf{(a)} elicits them personally responsible for damages caused from their autonomous vehicle going awry; or \textbf{(b)} raises insurance costs to a point where autonomous vehicles no longer represent  value for money.
 
 An alternative approach that may help to reduce these liability concerns, would be the introduction of legislative protection for manufacturers, to either limit, or remove the degree of liability that could be brought against them \cite{marchant}. This would in effect continue to leave manufacturers as the party held primarily responsible in the majority of cases, but prevents prosecutors from collecting excessive  payouts on account of the manufacturer's culpability \cite{marchant}. Whilst such an approach would likely appease some of the apprehensions raised on behalf the automotive industry, new issues begin to emerge over the negative impacts this may have on the degree to which manufacturers will remain incentivised to push for improvements in product safety under efforts to reduce their own liability \cite{marchant}. Therefore, it will become essential that such measures are taken with a view to find an optimal balance between stimulating continued innovation and maximising public safety. 
 	
-	Although legislative intervention is not taken lightly for protecting individual technologies and industries \cite{marchant}, statutes such as the Oil Pollution Act (1990) \cite{oil-pollution-act} and the Price-Anderson Nuclear Industries Indemnities Act (1957) \cite{nuclear-act} represent examples of where federal legislation has successfully been introduced to defend organisations and industries from suffering an intolerable degree of financial burden as a consequence of major disasters or incidents. Prominent examples include the \$71 million awarded to help cover the costs of claims following the 1979 \textit{Three Mile Island} partial nuclear meltdown \cite{three-mile-island}; and the cap of \$75 million placed upon damages payable by BP following the \textit{Deepwater Horizon} explosion and subsequent oil spill back in 2010 \cite{deepwater}.
+	Although legislative intervention is not taken lightly for protecting individual technologies and industries \cite{marchant}, statutes such as the Oil Pollution Act (1990) \cite{oil-pollution} and the Price-Anderson Nuclear Industries Indemnities Act (1957) \cite{nuclear-act} represent examples of where federal legislation has successfully been introduced to defend organisations and industries from suffering an intolerable degree of financial burden as a consequence of major disasters or incidents. Prominent examples include the \$71 million awarded to help cover the costs of claims following the 1979 \textit{Three Mile Island} partial nuclear meltdown \cite{nuclear-act}; and the cap of \$75 million placed upon damages payable by BP following the \textit{Deepwater Horizon} explosion and subsequent oil spill back in 2010 \cite{deepwater}.
 	
 	Whilst the benefits of legislative protection are evident in instances where the potential exists for widespread industrial bankruptcy, awarding dedicated  protection for manufacturers of autonomous vehicles is liable to set a precedent for comparative technologies that raises some difficult and contentious questions regarding where law makers should `draw the line' for protection coverage. For example, if laws were to be passed giving reduced or withdrawn indemnity to manufacturers of autonomous vehicles, would it be reasonable to expect the same protections to be applied to cases involving non-autonomous vehicles? Should fault found to be on account of a vehicle defect be viewed as any less severe when software is control of the wheel vs a human driver? Answers to such questions will only become clear as time and discussions continue to move forward.
 
-
-
-
-% Of course, legislative protection in the case automative manufacturers sets a precedent for comparative technologies.
-
-% Where do we set the limit/draw the line of protection coverage?
-
-% How do we determine what represents an incident "sufficient enough" for protection to be awarded? - i.e. any type of car crash or only "major recalls"?
-
-% The answers to these questions at present, remain yet to be determined.
-
 \section{Verifying Safety of Autonomous Vehicle Software}
-
-%For them to operate safely within unconstrained, unstructured and often unforgiving dynamic environments, autonomous vehicles depend upon an unprecedented degree of inductive inference and high-level reasoning - two factors guaranteed to increase software complexity, and render many traditional software   verification techniques inadequate to the task of assessing  .
 
 Driverless vehicles present unique and difficult challenges for software development and testing teams on account of their increased reliance upon inductive inference and high-level reasoning for allowing them to operate safely within uncontrolled, unstructured and often unforgiving dynamic environments \cite{wagner-1}. 
 
  With autonomous vehicles set to be placed in an unparalleled position of trust over the safety of their occupants, other road users and public bystanders, the need for rigorous and uncompromising verification of software integrity and safety becomes unequivocally essential. However, the sharp rise in complexity and behavioural obscurity exhibited within these systems leads many to believe traditional software-safety techniques will be rendered largely inadequate to the requirements stipulated in order to present driverless control systems with any chance of attaining safety certification \cite{wagner-1, wagner-2, wongpiromsarn, fisher-1}. To prevent this from becoming a potential barrier for future development of autonomous systems, work to find new approaches to verifying the integrity and reliability of autonomous software is becoming an area of increased research focus. 
  
- Wagner and Koopman present two contrasting yet equally pertinent approaches for realising more effective methods of assuring software safety in autonomous vehicles. In their first paper, the authors advocate Karl Popper`s notion of \textit{falsificationism} as a means of treating the act of testing more as a scientific endeavour rather than simply a ``find-and-fix" development exercise \cite{wagner-1}. It was Popper`s belief, that a scientific theory only becomes  meaningful if the potential remains for it to be later disproved given supporting empirical evidence \cite{popper}. This idea acts extend the long-held understanding that whilst to conclusively prove a theory one must show evidence for it holding in \textit{all} feasible cases, conclusively disproving this theory requires the demonstration of only a single negative case \cite{wagner-1}. 
+ Wagner and Koopman present two contrasting yet equally pertinent approaches for realising more effective methods of assuring software safety in autonomous vehicles. In their first paper, the authors advocate Karl Popper's notion of \textit{falsificationism} as a means of treating the act of testing more as a scientific endeavour rather than simply a `find-and-fix' development exercise \cite{wagner-1}. It was Popper's belief, that a scientific theory only becomes  meaningful if the potential remains for it to be later disproved given supporting empirical evidence \cite{wagner-1}. This idea acts extend the long-held understanding that whilst to conclusively prove a theory one must show evidence for it holding in \textit{all} feasible cases, conclusively disproving this theory requires the demonstration of only a single negative case \cite{wagner-1}. 
  
  The authors describe how this notion of \textit{``denying the consequent"} has the potential to flip the traditional view of testing completely on its head. No  longer is testing regarded as an exercise focussed on gathering \textit{``mountains of confirmatory evidence"} for findings of correct behaviour in nominal cases, but instead looks to actively seek out instances evidencing a contradiction of expected behaviour, and in so doing, directing developer attention toward addressing these - often overlooked - behavioural edge cases \cite{wagner-1}. 
  
@@ -502,119 +482,28 @@ The application of falsificationism to software testing appears to show promisin
 
 In a later paper, the same authors take their analysis one step further by exploring the challenges associated with the testing and validation of autonomous vehicles within the context of existing automotive safety practice. They introduce the ISO-26262 international standard, an automotive-specific variant of the IEC-61508 \textit{Functional Safety of Electrical/Electronic/Programmable Electronic Safety-related Systems} standard \cite{iec-61508}, which provides vehicle manufacturers with a standardised process used for developing life-critical automotive control and Engine Control Unit (ECU) software \cite{iso-26262}. 
 
-At the centre of the ISO-26262 standard, lies the `V-model' software development framework (see Figure \ref{fig:v-model}) \cite{iso-26262}. An extension of the `Waterfall' development framework \cite{waterfall}, the `V-model' describes a sequential development and validation process in which each development phase (represented on the left-hand side of the model) holds a direct association to a corresponding validation phase (represented on the right-hand side of the model). The process begins with the requirements analysis, before moving down through the design and into implementation representing the bridge between the two sides. As the process rises up the right-hand side, the focus of testing widens from validation of individual classes and components, up to a broader verification of the system as a whole through a combination of integration and acceptance testing \cite{v-model}. 
+At the centre of the ISO-26262 standard, lies the `V-model' software development framework. An extension of the `Waterfall' development framework, the `V-model' describes a sequential development and validation process in which each development phase (represented on the left-hand side of the model) holds a direct association to a corresponding validation phase (represented on the right-hand side of the model). The process begins with the requirements analysis, before moving down through the design and into implementation representing the bridge between the two sides. As the process rises up the right-hand side, the focus of testing widens from validation of individual classes and components, up to a broader verification of the system as a whole through a combination of integration and acceptance testing \cite{wagner-2}. 
 
 Whilst this process provides manufacturers with a stable footing for adopting robust software safety and verification practices, the authors discuss how the progression into fully-autonomous driving systems presents a number of challenges in \textit{``mapping the technical aspects of the [autonomous] vehicle to the V approach"}. In total, the authors identify five key technical aspects that at present remain inadequately covered by the existing approaches recommended as part of ISO-26262: \textit{``driver out of the loop"}; \textit{``complex requirements"}; \textit{``non-deterministic algorithms"}; \textit{``inductive learning algorithms"} and \textit{``fail-operational systems"} \cite{wagner-2}. In each case, the authors find their cause to be attributed to one or a combination of: an inevitable rise in system complexity; and the demand for more stringent assurances on system stability, security integrity and fault accountability \cite{wagner-2}. 
 
-Potential solutions that can be applied generally to help mitigate these types of issue include: \textbf{(a)} adopting a strategy of incremental deployment for autonomous driving operations in order to limit the scope of requirements under consideration at any one time; \textbf{(b)} employing use of a `monitor-actuator' paired architecture to provide segregation of complex autonomy operations from the more basic - but none-the-less indispensable - safety assurance logic; and finally, \textbf{(c)} introducing fault injection techniques across the range of system hardware and software tiers (such as Fuzz Testing \cite{fuzz-testing} or Compile-Time Injection \cite{compile-time-injection}) in order to help expose the more obscure edge-cases that - by their definition - are rarely triggered as part of a standard testing strategy \cite{wagner-2}. 
+Potential solutions that can be applied generally to help mitigate these types of issue include: \textbf{(a)} adopting a strategy of incremental deployment for autonomous driving operations in order to limit the scope of requirements under consideration at any one time; \textbf{(b)} employing use of a `monitor-actuator' paired architecture to provide segregation of complex autonomy operations from the more basic - but none-the-less indispensable - safety assurance logic; and finally, \textbf{(c)} introducing fault injection techniques across the range of system hardware and software tiers (such as Fuzz Testing \cite{wagner-1} or Compile-Time Injection) in order to help expose the more obscure edge-cases that, by definition, are rarely triggered as part of a standard testing strategy \cite{wagner-2}. 
 
 In their conclusion, Koopman and Wagner highlight that whilst many challenges remain on the path to reaching a comprehensive mode of safety-certification for high-level autonomy, it would not be beyond the bounds of possibility for systems deployed for autonomous vehicle control to be architected in such a way that would allow them to become assessed under the kinds of existing safety practices employed in industry today \cite{wagner-2}. 
 
 This notion appears to make a large degree of sense, given that standards like that of ISO-26262 and others represent the culmination of significant time, effort and empirical evidence to arrive at a set of recommended practices found to provide acceptable safety assurances. It would therefore seem injudicious to throw all of this pre-existing knowledge to one side, especially when many - if not all - of these recommendations can continue to be applied to software developed for autonomous vehicles following the comparatively small amount of work required to address the kinds of challenges and incompatibilities highlighted in \cite{wagner-2}. 
 
-%The application of high-level autonomy is of course not just limited to driverless vehicles. Military drones, exploratory research robots and now even ``connected" household thermostats all rely upon some degree of autonomy in order to operate independently of human control.
-
 Fisher et al. take a contrasting view toward the verification of general autonomous systems than what has been offered thus far. It is their belief, that in order to undertake the most effective evaluation of high-level autonomy behaviour, it is important to focus on assessing the \textit{intentions} of the system drawn upon its own beliefs about itself and the environment it occupies, rather than on the real-world outcomes that may or indeed \textit{may not} be directly attributable to the actions a system has chosen to take \cite{fisher-1}. 
 
 Critical to this assessment, is the ability to capture these high-level reasoning concepts within some type of formalised representation structure. In the work of Fisher et al., this role is fulfilled by the prominent \textit{Belief-Desire-Intention} (BDI) model for rational-agent architectures \cite{bdi}, in which the authors define a `belief' to represent \textit{``the agent`s (probably incomplete, possibly incorrect) information about itself, other agents and it's environment"}; a `desire' to represent \textit{``[one of] the agent`s long term goals"}; and finally an `intention' to be \textit{``a goal that an agent is actively pursuing"} \cite{fisher-1}. 
 
-Having obtained a BDI-based `specification' stipulating the required behavioural properties for an autonomous system, the authors then combine this with standard mathematical and logic-based methods to perform an adapted kind of formal verification\footnote{Formal verification describes the process of employing mathematical and logical methods to evaluate the behaviour of algorithm against the expectations stipulated as part of a pre-established specification \cite{fisher-2}.} to assess the extent to which the system matches the expected behaviour profile whilst operating within \textit{``an unrestricted environment representing the real world."} \cite{fisher-1}.
+Having obtained a BDI-based `specification' stipulating the required behavioural properties for an autonomous system, the authors then combine this with standard mathematical and logic-based methods to perform an adapted kind of formal verification\footnote{Formal verification describes the process of employing mathematical and logical methods to evaluate the behaviour of algorithm against the expectations stipulated as part of a pre-established specification \cite{fisher-1}.} to assess the extent to which the system matches the expected behaviour profile whilst operating within \textit{``an unrestricted environment representing the real world."} \cite{fisher-1}.
 
-Whilst the authors spend much of their time delving into the technical details of their verification approach (later publishing a follow-up paper providing a fully-comprehensive explanation of the methodology and its intricacies \cite{fisher-2}), it would seem that the real value of this work comes from the philosophy that it fosters. In any life situation, there always exists the possibility, that the \textit{intended} outcome of an action or sequence of actions will fail to correspond with the actual turn of events. This observation is no less applicable in the case of autonomous beings as it is in humans; for example, whilst an autonomous car may \textit{intend} to avoid hitting pedestrians at all conceivable costs, there always remains the potential situation that a child may run out into the road before the car has time to take evasive action. If this situation was to fall as part of an evaluation assessment, would it be right for the system to be found unfit for purpose, given that its \textit{intention} was to always avoid pedestrians and take evasive action where required to try and ensure this? 
+Whilst the authors spend much of their time delving into the technical details of their verification approach (later publishing a follow-up paper providing a fully-comprehensive explanation of the methodology and its intricacies \cite{fisher-1}), it would seem that the real value of this work comes from the philosophy that it fosters. In any life situation, there always exists the possibility, that the \textit{intended} outcome of an action or sequence of actions will fail to correspond with the actual turn of events. This observation is no less applicable in the case of autonomous beings as it is in humans; for example, whilst an autonomous car may \textit{intend} to avoid hitting pedestrians at all conceivable costs, there always remains the potential situation that a child may run out into the road before the car has time to take evasive action. If this situation was to fall as part of an evaluation assessment, would it be right for the system to be found unfit for purpose, given that its \textit{intention} was to always avoid pedestrians and take evasive action where required to try and ensure this? 
 
-The overarching argument made by Fisher et al., is that this would not represent a justifiable approach to verifying the high-level reasoning behaviour implanted within an autonomous system \cite{fisher-1}. It seems reasonable to assume that it will never be possible to fully model each and every potential situation and outcome that may arise from having an autonomous system operating within real world environments. Therefore, rather than obtaining a limited and often inaccurate assessment of the behaviour of a high-level autonomy drawn upon the effect it has within the real world, testing and verification methods should instead be looking to ensure - to the greatest possible extent - that the \textit{intentions} of these systems meet our desired expectations of safe and considerate reason, and that the beliefs used to derive these intentions give as accurate a view of the real world as is possible \cite{fisher-2}. 
+The overarching argument made by Fisher et al., is that this would not represent a justifiable approach to verifying the high-level reasoning behaviour implanted within an autonomous system \cite{fisher-1}. It seems reasonable to assume that it will never be possible to fully model each and every potential situation and outcome that may arise from having an autonomous system operating within real world environments. Therefore, rather than obtaining a limited and often inaccurate assessment of the behaviour of a high-level autonomy drawn upon the effect it has within the real world, testing and verification methods should instead be looking to ensure - to the greatest possible extent - that the \textit{intentions} of these systems meet our desired expectations of safe and considerate reason, and that the beliefs used to derive these intentions give as accurate a view of the real world as is possible \cite{fisher-1}. 
 
 This idea begins to break down the boundary between the \textit{functional} and \textit{ethical} verification of an autonomous system, when we consider that the ultimate objective of a high-level autonomy should be to make decisions that achieve a specific task, whilst - crucially - continuing to uphold the same moral values accepted and followed by humankind. Whilst it seems insurmountable for testing and verification to ever eradicate the possibility of an autonomous system undertaking an unsafe action, the work conducted by Fisher et al. gives credence to the notion that it will be possible for us to assure ourselves that the systems we entrust with our safety will never \textit{deliberately} choose an action that is \textit{more likely} to cause us harm or inconvenience than is presented by any of the other choices it has available at the time \cite{fisher-1}. 
 
-
-
-
-
-
-%In order to drive the assessment of an autonomous system against its required behavioural properties, the authors employ 
-%
-%
-%
-%
-%%
-%%In order for this type of evaluation to become possible, the authors propose to exploit existing methods of formal verification for rational-agents in order
-%
-%
-%Fisher et al. take a wider view toward the evaluation of autonomous systems, discussing their proposal to apply formal verification within the context of a general autonomous system architecture, as opposed to focussing upon any specific field or application \cite{fisher-1}. 
-%
-% Fisher et al. propose to extend this technique by employing the \textit{Belief-Desire-Intention} (BDI) rational-agent architecture as the basis for establishing a model of system behaviour used to support upcoming verification within . The BDI
-
-% incorporate existing rational-agent logic as the basis for this behaviour specification \cite{fisher-1}.
-
-
-
-
-
-
-%
-%
-%Whilst it seems insurmountable for testing and verification to ever eradicate the possibility of an autonomous system undertaking an unsafe action, it is reassuring to think that methods capable of confirming such actions were not taken in preference over a safe
-%
-%
-%
-%
-
-
-
-
-
-
-
-
-
-%
-%
-%Whilst limitations of existing validation practices are likely to constrain the scope of functionality exhibited by autonomous vehicles \cite{wagner-2}, over time these constraints may become 
-%
-%
-%
-%
-
-
-%What perhaps is most striking 
-
-%
-%
-%What is most striking about these two papers, is that they appear to offer entirely divergent views on what should become recommended best practice for affording extensive and . In the first paper 
-%
-%
-%
-%
-%
-% the clear divergence they exhibit in they views for to addressing the same fundamental problem of advancing testing practices t
-%
-
-
-
-%
-%The first challenge refers to the fact that human drivers can no longer be relied upon to relieve an autonomous control system in the event of exceptional circumstances. This naturally raises issues over the fallbacks such a system must feature to handle these types of situations itself, and the inevitable increase in software complexity this brings as a consequence. The second challenge refers to the general incompatibility placed between the expectation for software verification to be based upon fixed and unambiguous requirements, and the fact that autonomous control systems by their very nature are expected work to under an incredibly large and diverse set of conditions that could not feasibly be represented using a formal requirements specification. 
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-  
-% one must gather an infinite amount of evidence \textit{conclusively} prove a theory hold, but it only requires a single negative observation to conclusively refute the theory. 
-% 
-% 
-% to conclusively prove a theory one must gather an infinite amount of supporting evidence, however to disprove a theory, one must find 
-% 
-% that a theory can never be conclusively proven through the use of induction \cite{problem-of-induction}, but \textit{can} be conclusively disproved by 
-% 
-% 
-% the use of inductive logic for building a theory 
  
 \section{Vehicle System Security}
 
@@ -622,11 +511,11 @@ Although the rise in in-car autonomy is set to offer a plethora of significant a
 
 Whilst today's vehicles remain capable of demonstrating only a very limited range of semi-autonomous functionality (i.e. automatic braking, adaptive cruise control, automatic-parking etc.), the findings from growing research in the exploitation of in-car entertainment, cellular and diagnostic systems make for worrying reading. 
 
-In a joint-published review of automotive cyber-security risks \cite{iet}, the Institution of Engineering and Technology (IET) and the Knowledge Transfer Network (KTN) highlight a number of academic studies focussing specifically on highlighting vulnerabilities in the security of electronic automotive systems dating back to 2010. However, this study has found evidence of consideration toward the cyber-security of vehicles arising much earlier than than 2010, with Koopman writing in 2004 about the security risks posed through providing vehicles with an internet connection \cite{koopman-2004}; a feature that has since gone on to become a major USP for vehicles in today's market \cite{onstar, mcafee}. 
+In a joint-published review of automotive cyber-security risks \cite{iet}, the Institution of Engineering and Technology (IET) and the Knowledge Transfer Network (KTN) highlight a number of academic studies focussing specifically on highlighting vulnerabilities in the security of electronic automotive systems dating back to 2010. However, this study has found evidence of consideration toward the cyber-security of vehicles arising much earlier than than 2010, with Koopman writing in 2004 about the security risks posed through providing vehicles with an internet connection \cite{koopman-2004}; a feature that has since gone on to become a major USP for vehicles in today's market \cite{onstar}. 
 
 In the IET/KTM paper, their review of academic research projects begins by introducing the work of researchers from California-San Diego and Washington Universities, who successfully intercepted and later disrupted internal Electronic Control Unit (ECU) communications through the use of custom software exploiting access gained through a cable connection to the vehicle's diagnostic port \cite{koscher-1}. This represents one of the first projects shown to successfully override critical locomotive and safety components (including the engine, door locks and window controls) by transmitting messages over the Controller Area Network (CAN) bus used to enable the numerous ECUs present within the car to communicate with one another \cite{iet} \cite{pcworld}. 
 
-In the following year, the same team of researchers presented results from experiments, obtained both on and off road, that demonstrate their ability to remotely override and track a modern mid-range vehicle through an extensive variety of interfaces including compact discs, radio channels, cellular and Bluetooth connections \cite{koscher-2}. Examples of implemented exploits include installing a \textit{``CD-based firmware update [to] re-flash the media player ECU"} \cite{koscher-2}, allowing for custom overrides to be initiated when a particular station name is received over an FM signal; using the in-car cellular connection to download a small C-based IRC client exploit for passing CAN bus messages sent via any internet connection to the car to execute; and employing an \textit{``Android phone and trojan app"} \cite{kosher-2} to gain access to the internal CAN bus via a buffer overflow attack \cite{kosher-2}.
+In the following year, the same team of researchers presented results from experiments, obtained both on and off road, that demonstrate their ability to remotely override and track a modern mid-range vehicle through an extensive variety of interfaces including compact discs, radio channels, cellular and Bluetooth connections \cite{koscher-2}. Examples of implemented exploits include installing a \textit{``CD-based firmware update [to] re-flash the media player ECU"} \cite{koscher-2}, allowing for custom overrides to be initiated when a particular station name is received over an FM signal; using the in-car cellular connection to download a small C-based IRC client exploit for passing CAN bus messages sent via any internet connection to the car to execute; and employing an \textit{``Android phone and trojan app"} to gain access to the internal CAN bus via a buffer overflow attack \cite{koscher-2}.
 
 In 2014, Valasek and Miller published a comprehensive paper detailing their success in using approaches similar to those highlighted in \cite{koscher-1} and \cite{koscher-2} to override critical vehicle components in the case of two  different vehicles produced by independent manufacturers \cite{valasek-1}. Their work acquired significant media attention, after they demonstrated the ability to assume control of functions including the steering, information displays and even the brake pedal, all whilst the vehicle was in motion and under the direction of a human driver \cite{forbes} \cite{bbc-valasek}. In addition to confirming the findings of previous work \cite{koscher-1, koscher-2} along with introducing a range of new attacks, the authors use their work to highlight the need for greater accessibility for researchers in conducting these types of investigation in a way that supports open and transparent discussion between academia and the automotive industry \cite{valasek-1}. To this effect, the authors announced plans to release all of the tools and data gathered in their investigation into the public sphere for others to use - an act never before undertaken as far as current evidence suggests \cite{valasek-1} 
 
@@ -634,180 +523,34 @@ Since this time (and beyond the scope of the IET/KTM survey \cite{iet}), Valasek
 
 In this case, the authors were able to obtain access through a vulnerability exposed within the internet-enabled in-car entertainment system known as the \textit{``head unit"} \cite{valasek-2}. This system was found to have direct access to both of the primary CAN buses used to inter-connect the vehicle's numerous ECUs. By sending messages over a cellular connection to an insecure IRC port monitored by the head unit, the authors found themselves able to remotely transmit CAN packets to the vehicle, and in turn, infiltrate the normal operation of the various safety-critical and non safety-critical systems \cite{valasek-2}. 
 
-Exhibiting their findings through a provocative public demonstration involving subjecting a journalist to a remote attack whilst driving along a US highway \cite{wired}, the author's work received soaring media coverage \cite{wired, bbc-jeep, washingtonpost-jeep}, and prompted the vehicle manufacturer in question to initiate a recall over 1.4 million vehicles in response to their findings \cite{bbc-recall}.
+Exhibiting their findings through a provocative public demonstration involving subjecting a journalist to a remote attack whilst driving along a US highway \cite{wired}, the author's work received soaring media coverage \cite{ieee-jeep,  washingtonpost-jeep}, and prompted the vehicle manufacturer in question to initiate a recall over 1.4 million vehicles in response to their findings \cite{bbc-recall}.
 
 All of these findings present a very bleak outlook for the security, and ultimate safety, of fully autonomous vehicles, that are intrinsically set to depend on electronic systems to an entirely different degree to that of even today's most sophisticated vehicle makes and models. 
 
 Whilst greater openness and transparency from vehicle manufacturers is an area identified by many in the security industry as requiring drastic and immediate improvement \cite{valasek-1, valasek-2, iet, yagdereli}, what is striking about all of these investigations, is the evidence they provide for indicating a lack of appropriate authentication applied by vehicle manufacturers to protect electronic systems (including safety-critical systems) from unauthorised communications. On a similar point, Valasek and Miller propose that it is possible for vehicle systems to `detect' many of the harmful communications sent by hackers through inspection of traffic patterns recorded over a CAN bus network \cite{valasek-1}. They find that under normal operating circumstances, CAN packets sent between ECUs tend to follow a marked and repeatable timing pattern, causing their own custom packets to become exposed owing to the irregularities exhibited in their transmission behaviour \cite{valasek-1}. The authors also note how a sudden and unexpected proliferation of diagnostic CAM packets (found to only traditionally exist in the case of authorised system inspections) may also contribute to highlighting the presence of a unauthorised  intruder packets that are often characterised as diagnostic messages \cite{valasek-1}.  
 
-Other mitigation strategies proposed for future vehicle systems include employing redundant control systems to help avoid the risk of a single point of failure across safety-critical components \cite{yagdereli, kpmg}; supporting a ``voting-logic" approach derived from the ``Byzantine general" problem, to coordinate the defence against the possibility of an attacker gaining control over all redundant systems via a single point of access \cite{yagdereli}; and finally enforcing the need to consider and formally assess cyber-security requirements as part of existing requirements analysis \cite{valasek-1, yagdereli}.
-
-
-
-
-%we remain a significant way off from observing fully-autonomous vehicles 
-%
-%
-%
-%
-%
-%
-%
-%
-%it also is likely to create a host of new types of vulnerability just waiting for opportunistic cyber-criminals to uncover and exploit for their own gains. 
-%
-%, 
-%
-%As vehicles have become ever more sophisticated,
-
-%As cyber-criminals begin to show increasing attention toward the exploitation so-called ``connected" vehicles, manufacturers must find new ways to sufficiently demonstrate that their systems can deliver a robust defence against malicious attacks that risk compromising vehicle safety. \cite{yagdereli}.
-
-
-
-
-
-%
-%
-% \section{Ethical \& Moral}
-% 
-% 
-% 
-% 
-% In this final topic, we direct attention toward the more controversial aspects of .
- 
-% A paper that refers back to the discussion of liability apportion.
-
-% An example of a floating figure using the graphicx package.
-% Note that \label must occur AFTER (or within) \caption.
-% For figures, \caption should occur after the \includegraphics.
-% Note that IEEEtran v1.7 and later has special internal code that
-% is designed to preserve the operation of \label within \caption
-% even when the captionsoff option is in effect. However, because
-% of issues like this, it may be the safest practice to put all your
-% \label just after \caption rather than within \caption{}.
-%
-% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class
-% option should be used if it is desired that the figures are to be
-% displayed while in draft mode.
-%
-%\begin{figure}[!t]
-%\centering
-%\includegraphics[width=2.5in]{myfigure}
-% where an .eps filename suffix will be assumed under latex, 
-% and a .pdf suffix will be assumed for pdflatex; or what has been declared
-% via \DeclareGraphicsExtensions.
-%\caption{Simulation results for the network.}
-%\label{fig_sim}
-%\end{figure}
-
-% Note that the IEEE typically puts floats only at the top, even when this
-% results in a large percentage of a column being occupied by floats.
-
-
-% An example of a double column floating figure using two subfigures.
-% (The subfig.sty package must be loaded for this to work.)
-% The subfigure \label commands are set within each subfloat command,
-% and the \label for the overall figure must come after \caption.
-% \hfil is used as a separator to get equal spacing.
-% Watch out that the combined width of all the subfigures on a 
-% line do not exceed the text width or a line break will occur.
-%
-%\begin{figure*}[!t]
-%\centering
-%\subfloat[Case I]{\includegraphics[width=2.5in]{box}%
-%\label{fig_first_case}}
-%\hfil
-%\subfloat[Case II]{\includegraphics[width=2.5in]{box}%
-%\label{fig_second_case}}
-%\caption{Simulation results for the network.}
-%\label{fig_sim}
-%\end{figure*}
-%
-% Note that often IEEE papers with subfigures do not employ subfigure
-% captions (using the optional argument to \subfloat[]), but instead will
-% reference/describe all of them (a), (b), etc., within the main caption.
-% Be aware that for subfig.sty to generate the (a), (b), etc., subfigure
-% labels, the optional argument to \subfloat must be present. If a
-% subcaption is not desired, just leave its contents blank,
-% e.g., \subfloat[].
-
-
-% An example of a floating table. Note that, for IEEE style tables, the
-% \caption command should come BEFORE the table and, given that table
-% captions serve much like titles, are usually capitalized except for words
-% such as a, an, and, as, at, but, by, for, in, nor, of, on, or, the, to
-% and up, which are usually not capitalized unless they are the first or
-% last word of the caption. Table text will default to \footnotesize as
-% the IEEE normally uses this smaller font for tables.
-% The \label must come after \caption as always.
-%
-%\begin{table}[!t]
-%% increase table row spacing, adjust to taste
-%\renewcommand{\arraystretch}{1.3}
-% if using array.sty, it might be a good idea to tweak the value of
-% \extrarowheight as needed to properly center the text within the cells
-%\caption{An Example of a Table}
-%\label{table_example}
-%\centering
-%% Some packages, such as MDW tools, offer better commands for making tables
-%% than the plain LaTeX2e tabular which is used here.
-%\begin{tabular}{|c||c|}
-%\hline
-%One & Two\\
-%\hline
-%Three & Four\\
-%\hline
-%\end{tabular}
-%\end{table}
-
-
-% Note that the IEEE does not put floats in the very first column
-% - or typically anywhere on the first page for that matter. Also,
-% in-text middle ("here") positioning is typically not used, but it
-% is allowed and encouraged for Computer Society conferences (but
-% not Computer Society journals). Most IEEE journals/conferences use
-% top floats exclusively. 
-% Note that, LaTeX2e, unlike IEEE journals/conferences, places
-% footnotes above bottom floats. This can be corrected via the
-% \fnbelowfloat command of the stfloats package.
+Other mitigation strategies proposed for future vehicle systems include employing redundant control systems to help avoid the risk of a single point of failure across safety-critical components \cite{yagdereli, kpmg}; supporting a \textit{``voting-logic"} approach derived from the \textit{``Byzantine general"} problem, to coordinate the defence against the possibility of an attacker gaining control over all redundant systems via a single point of access \cite{yagdereli}; and finally enforcing the need to consider and formally assess cyber-security requirements as part of existing requirements analysis \cite{valasek-1, yagdereli}.
 
 
 \section{Summary \& Conclusion}
 
-This paper has provided an introductory - but by no means comprehensive - study into a selection of critical considerations that are set to hold significant influence over the viability of future fully-autonomous driving technologies. From the literature studied under this review, it has become clear that the potential advancements this technology can offer for vehicle safety, accessibility and efficiency are to be signficant. However, many concerns remain over the verification, security and liability implications that driverless vehicles present, as they usher in a new wave of cyber-physical transportation possibilities.
+This paper has provided an introductory - but by no means comprehensive - study into a selection of critical considerations that are set to hold significant influence over the viability of future fully-autonomous driving technologies. From the literature studied under this review, it has become clear that the potential advancements this technology can offer for vehicle safety, accessibility and efficiency are to be significant. However, many concerns remain over the verification, security and liability implications that driverless vehicles present, as they usher in a new wave of cyber-physical transportation possibilities.
 
 In the legal field, a battle is brewing between manufacturers and consumers as to who should be made financially responsible in the event that a vehicle under autonomous control becomes embroiled in a traffic collision. Legislators face a difficult task in balancing the concerns of both parties, so to avoid the risk of deterring investment in a technology that promises so many far-reaching social benefits. Whilst wholesale legislative protection provides incentives for industry to continue development and innovation of driverless technologies, it comes at the price of increased taxes for individuals and the potential for relaxed attitudes toward iterative improvements on system safety and reliability to emerge, on account of the reduced liability risk for manufacturers. In striving for an optimal balance between stimulating continued innovation and maximising public safety, the adoption of specialist `driverless' insurance, in combination with potential exemptions for disabled or otherwise incapable drivers, would appear to provide a strong foundation from which further discussions can begin. 
 
 Further evidence in support of this approach is noted in the announcement made by the UK Government (May 2016) for plans to create a new `Modern Transport Bill', set to \textit{``...put the UK at the forefront of autonomous and driverless vehicles ownership and use..."} by \textit{``encouraging potential investors in autonomous vehicles"} and \textit{``ensuring appropriate insurance is available to support the use of autonomous vehicles."} \cite{modern-transport-bill}.
 
-As vehicles continue to depend ever more upon increased autonomy and high-level decision making, developers responsible for creating these autonomous systems will need to consider carefully how to sufficiently verify their behaviour in order to assure the authorities, and the wider public, that they can be trusted with ensuring our safety. The complex and often obscure behavioural nature of autonomous systems renders many traditional testing and verification practices inadequate. This requires the software industry to find new perspectives  toward the assessment of autonomous behaviour, diverting focus away from the outcome of individual actions, to instead understand and verify the intentions and beliefs that drive a system to take certain choices. 
+As vehicles continue to depend ever more upon increased autonomy and high-level decision making, developers responsible for creating these autonomous systems will need to consider carefully how to sufficiently verify their behaviour in order to assure the authorities, and the wider public, that they can be trusted with ensuring our safety. The complex and often obscure behavioural nature of autonomous systems renders many traditional testing and verification practices inadequate. This requires the software industry to find new perspectives toward the assessment of autonomous behaviour, diverting focus away from the outcome of individual actions, to instead understand and verify the intentions and beliefs that drive a system to take certain choices. 
 
-It is at this point we realise, how the values we hold over our own ethical conduct are likely to become a rising influence over the judgment we pass for verifying the behaviour of high-level autonomy. It therefore becomes our obligation, to ensure through further research and collaborative efforts, that we can adequately define,  represent and verify the upstanding of `ethical principles' within the context of an independent yet safety-critical autonomous control system.
+It is at this point we realise, how the values we hold over our own ethical conduct are likely to become a rising influence over the judgment we pass for verifying the behaviour of high-level autonomy. It therefore becomes our obligation, to ensure through further research and collaborative efforts, that we can adequately define, represent and verify the upstanding of `ethical principles' within the context of an independent yet safety-critical autonomous control system.
 
 Of course, the integrity of driverless systems remains only through their capability to defend against corruption. As security researchers have shown, hackers and cyber-criminals prose a real and worrying threat not only to the security of a vehicle's electronic systems, but ultimately to the safety of its occupants and others in the vicinity. 
 
 Whilst it is clear that vehicle manufacturers have some way to go in order to sufficiently demonstrate that their systems can deliver a robust defence against malicious attacks, existing research in this area shows promise that public confidence can be recovered, if industry is prepared to exhibit greater cooperation and transparency with researchers to implement appropriate initiatives to enhance the security of future vehicle systems.
 
-Unfortunately, this review has been unable to cover all of the many factors set to influence consumer consideration toward the acceptance of autonomous vehicles. Concerns over vehicle cost, passenger ergonomics, driver `handover' practices  and `moral' decision-making continue to sit alongside the legal, testing and security considerations that both the industry and society in general must overcome, if a `driverless' future is to ever become a true reality. 
+Unfortunately, this review has been unable to cover all of the many factors set to influence consumer consideration toward the acceptance of autonomous vehicles. Concerns over vehicle cost, passenger ergonomics, driver `handover' practices and `moral' decision-making continue to sit alongside the legal, testing and security considerations that both the industry and society in general must overcome, if a `driverless' future is to ever become a true reality. 
 
-In order to achieve this, we must endeavour to treat the qualitative analysis of these considerations with the same vigour and dedication as ongoing technical innovation, through undertaking systematic reviews of continued research evidence and conducting a comprehensive meta-ethnography \cite{meta-ethnography} of consumer opinions to extrapolate further insights.
-
-
-
-
-
-
-
-
-
-%continue to present novel challenges for both industry and society in general 
-%
-%Other factors of consumer consideration toward autonomous vehicles that unfortunalty  included in this review 
-
-%
-%We are beginning to discover that the verification of high-level autonomy is becoming more closely intertwined with the ethics of autonomous systems, as they begin to exhibit the kinds of high-level cognitive functions previously thought to be exclusive to the human mind.
-% conference papers do not normally have an appendix
-
+In order to achieve this, we must endeavour to treat the qualitative analysis of these considerations with the same vigour and dedication as ongoing technical innovation, through undertaking systematic reviews of continued research evidence and conducting a comprehensive meta-ethnography \cite{noblit} of consumer opinions to extrapolate further insights.
 
 % use section* for acknowledgment
 %\section*{Acknowledgment}
@@ -842,7 +585,14 @@ In order to achieve this, we must endeavour to treat the qualitative analysis of
 %
 %\end{thebibliography}
 
+\bibliographystyle{IEEEtran}
+% argument is your BibTeX string definitions and bibliography database(s)
 
+\begingroup
+\raggedright
+
+\bibliography{cgddrd-sem1020-lit-review}
+\endgroup
 
 
 % that's all folks
